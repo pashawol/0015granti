@@ -1,0 +1,35 @@
+ 
+	  
+.soc{
+	margin: 0 -5px;
+	&__item{
+		display: inline-block;
+		text-decoration: none !important;
+		margin: 0 5px;
+		vertical-align: middle;
+		@include mt;
+		&:hover{
+		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+			opacity: .6 ;
+		}
+	}
+	svg{
+		width: 31px;
+		height: 31px;
+	}
+	 
+
+}
+ 
+
+.counter{
+	counter-reset: num;
+	&__item {
+		position: relative; 
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+		}
+	}
+}
+

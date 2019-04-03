@@ -1,0 +1,71 @@
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="img/svg/sprite.svg#" + name)
+
+
+mixin breadcrumb(act, ...items)
+	nav.breadcrumb
+		each item in items
+			a.breadcrumb-item(href='#')= item 
+		span.breadcrumb-item.active= act
+		
+mixin pugin()
+	nav(aria-label='...')
+		ul.pagination.justify-content-center
+			li.page-item.disabled
+				a.page-link(href='#', tabindex='-1') 
+					i(class="fas fa-chevron-left")
+			li.page-item.disabled
+				a.page-link.d-none.d-md-block(href='#', tabindex='-1') Назад
+
+			li.page-item
+				a.page-link(href='#') 1
+			li.page-item.active
+				a.page-link(href='#')
+					| 2 
+					span.sr-only (current)
+			li.page-item
+				a.page-link.page-link-more(href='#') ...
+			li.page-item
+				a.page-link(href='#') 3
+
+			li.page-item
+				a.page-link.d-none.d-md-block(href='#') Дальше
+			li.page-item
+				a.page-link(href='#') 
+					i(class="fas fa-chevron-right")
+//- h2.yel(class="  wow fadeInUp animated " data-wow-offset="120" data-wow-duration="1.2s")  
+mixin arrow()
+	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
+		+icon('chevron-right')
+	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+		+icon('chevron-left')
+		
+ 
+mixin soc()
+	+b.soc
+		mixin item()
+			+e.A.item(href="" target="_blank"): i(class="fab")&attributes(attributes)
+		+item()(class="fa-twitter")
+		+item()(class=" fa-facebook")
+		+item()(class="fa-google-plus")
+//- WP menu
+//- mixin mnu()
+//- 	- var nav= { "Наши работы":"#","Цены":"#","Калькулятор":"#","Акции":"#" ,"Заказать":"#"}
+//- 	ul.menu
+//- 		li.menu-item.menu-item-has-children
+//- 			a(href="#") О нас
+//- 			ul.sub-menu
+//- 				li.menu-item: a(href="#") Строительство загородных домов
+//- 				li.menu-item: a(href="#") Отделка загородных домов
+//- 				li.menu-item: a(href="#") Покраска деревянных домов
+//- 				li.menu-item: a(href="#") Штукатурные фасады загородных домов
+//- 		each linkPatch, linkName in nav
+//- 			li.menu-item: a(href="#")= linkName
+
+mixin mnu()
+	- var nav= {"Продукция ":"#","Услуги  ":"#","Подбор септика   ":"#","Акции ":"#"," О компании  ":"#"," Доставка и оплата ":"#"," Клиентам  ":"#"," Наши работы   ":"#","Контакты ":"#"}
+	+e.UL.nav
+		each linkPatch, linkName in nav
+			+e.LI.item: +e.A.link(href= linkPatch)= linkName
