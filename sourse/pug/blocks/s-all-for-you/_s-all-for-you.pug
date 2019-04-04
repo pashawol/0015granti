@@ -1,0 +1,18 @@
+mixin s-all-for-you()
+	// start s-all-for-you
+	+b.s-all-for-you.section#s-all-for-you&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Все для вашего удобства
+			.row
+				mixin item(i,t)
+					+e.col.col-lg.col-sm-4.col-6
+						+e.img-wrap
+							img.lazy.res-i(src="#" data-src=`img/for-you-${i}` width='60' height="60", alt="")
+						+e.text= t
+				+item("1.svg","Выезд замерщика")
+				+item("2.svg","Производство")
+				+item("3.svg","Доставка")
+				+item("4.png","Качественный монтаж")
+				+item("5.svg","Сервисное обслуживание")
+	// end s-all-for-you

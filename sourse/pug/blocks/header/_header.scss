@@ -1,5 +1,6 @@
 .header{
-	
+  @include bgs;
+  border-bottom: 1px solid #d7d7d7;
   // 
   @include media-breakpoint-up(xl) {}
 

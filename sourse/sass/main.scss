@@ -3,7 +3,10 @@ $output-bourbon-deprecation-warnings: false;
 @import "bourbon";
 // @import "../../node_modules/rfs/scss";
 @import "vars";
-@import "bootstrap/bootstrap";
+// @import "bootstrap-sass/bootstrap";
+
+@import "bootstrap.min";
+@import "bootstrap-theme/bootstrap";
 // @import "../libs/animate";
 // @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fontawesome";
 // @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-brands";
@@ -16,7 +19,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "../libs/dropzone";
 // @import "../libs/gijgo-master/dist/combined/css/gijgo";
 // @import "../libs/gijgo-master/dist/combined/css/demo.min";
-@import "../libs/slick/slick.scss";
+// @import "../libs/slick/slick.scss";
 // @import "../libs/ion.rangeSlider/css/ion.rangeSlider.min.css";
 
 @import "base";
@@ -39,5 +42,29 @@ $output-bourbon-deprecation-warnings: false;
 @import "../pug/blocks/s-form/s-form";
 @import "../pug/blocks/footer/footer";
 @import "../pug/blocks/modal/modal";
+
+
+@import "../pug/blocks/s-content/_s-content";
+@import "../pug/blocks/s-contact/_s-contact";
+@import "../pug/blocks/s-why/_s-why";
+@import "../pug/blocks/s-category/_s-category";
+@import "../pug/blocks/s-calc/_s-calc";
+@import "../pug/blocks/s-all-for-you/_s-all-for-you";
+@import "../pug/blocks/s-stock/_s-stock";
+@import "../pug/blocks/s-portfolio/_s-portfolio";
+
+
+@import "../pug/blocks/s-catalog/_s-catalog";
+@import "../pug/blocks/s-banner/_s-banner";
+@import "../pug/blocks/s-tabs/_s-tabs";
+
+@import "../pug/blocks/card-head/_card-head";
+@import "../pug/blocks/kart-body/_kart-body";
+
+@import "../pug/blocks/s-basket/_s-basket";
+
+@import "../pug/blocks/aside/_aside";
+@import "../pug/blocks/s-cards/_s-cards";
+
 
 @import "media";// Всегда в конце

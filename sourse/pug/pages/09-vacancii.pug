@@ -1,0 +1,64 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-why/_s-why.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/s-all-for-you/_s-all-for-you.pug
+include ../blocks/s-stock/_s-stock.pug
+include ../blocks/s-portfolio/_s-portfolio.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-banner/_s-banner.pug
+include ../blocks/s-tabs/_s-tabs.pug
+include ../blocks/aside/_aside.pug
+include ../blocks/s-cards/_s-cards.pug
+
+block title
+	title Вакансии
+
+block pagecontent
+	 
+	//- +mob-mnu()
+	+b.HEADER.header
+		+top-line()
+		+top-nav() 
+		+b.header-block--page(style='background-image: url(img/Vacansii.jpg);')
+			.container
+				.row
+					.col-md-6.text-center
+						h1.strong  Вакансии 
+
+	.container
+		+breadcrumb('Вакансии','Главная')
+		.row
+			.col-lg-4.d-none.d-lg-block
+				+aside
+			.col-lg-8
+				+b.s-content.pt-0.section
+					p Компания «Гранти Групп» — это динамично развивающаяся компания, которая постоянно пополняется талантливыми и амбициозными профессионалами. Если Вы считаете себя профессионалом, Вам хочется работать в дружном коллективе, то можете ознакомиться с перечнем открытых вакансий.
+
+					p Подать заявку на вакансию Вы можете несколькими способами:
+
+					p 
+						.h3.strong.text-primary 01 
+						|  Отправить свое резюме на общую почту  
+						| 
+						a.text-secondary.tdu(href="mailto:info@granti-group.ru") info@granti-group.ru
+						|, в теме письма указать «по поводу Вакансии».
+
+					p 
+						.h3.strong.text-primary 02 
+						|  Заполнить анкету кандидата. Для скачивания анкеты нажмите на кнопку «Скачать анкету».
+
+
+					p Если в данный момент подходящей вакансии для Вас нет, рекомендуем заполнить анкету кандидата и отправить нам, наша команда всегда нуждается в сильных профессионалах!
+					.row
+						.col-auto
+							img.lazy(src="#" data-src="img/doc-i.svg", width="28" height="39" alt="")
+						.col-auto
+							+e.btn.btn-primary.btn(href="#") Скачать анкету
+
+	+footer()
+

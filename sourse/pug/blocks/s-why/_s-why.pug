@@ -1,0 +1,25 @@
+mixin s-why()
+	// start s-why
+	+b.s-why.section#s-why&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Почему более 
+					| 
+					strong 2500 тысяч 
+					| клиентов выбрали нас
+			.row
+				mixin item(i,t)
+					+e.col.col-lg-4.col-6
+						+e.img-wrap
+							img.lazy.res-i(src="#" data-src=`img/why-${i}`, alt="")
+						+e.text= t
+				+item("1.svg","Низкие цены")
+				+item("2.svg","Гарантия 10 лет")
+				+item("3.svg","Гибкая система скидок")
+				+item("4.svg","Бесплатный замер")
+				+item("5.svg","Европейское качество")
+				+item("6.svg","82% объектов сдаются досрочно")
+				+item("7.svg","Собственное производство")
+				+item("8.svg","Монтаж в удобное время")
+				+item("9.png","Короткие сроки изготовления")
+	// end s-why

@@ -1,4 +1,7 @@
 .s-content {
+	&__btn{
+		width: 160px;
+	}
 	//
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

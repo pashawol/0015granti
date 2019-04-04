@@ -1,0 +1,27 @@
+mixin s-portfolio()
+	// start s-portfolio
+	+b.s-portfolio.section#s-portfolio&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Портфолио
+				
+			//- .row
+			+b.tabs
+				+e.caption
+					+e.btn.active Гаражные ворота
+					+e.btn Профнастил
+					+e.btn Решетчатые ворота
+				+e.wrap
+					mixin cont()
+						+e.content&attributes(attributes)
+							+e.slider--js.gal
+								+e.slide
+									+e.img-wrap.img-bg(href="img/port-1.jpg"): img.res-i(src="#" data-lazy="img/port-1.jpg", alt="")
+								+e.slide
+									+e.img-wrap.img-bg(href="img/port-2.jpg"): img.res-i(src="#" data-lazy="img/port-2.jpg", alt="")
+								+e.slide
+									+e.img-wrap.img-bg(href="img/port-2.jpg"): img.res-i(src="#" data-lazy="img/port-2.jpg", alt="")
+					+cont()(class="active")
+					+cont()
+					+cont()
+	// end s-portfolio

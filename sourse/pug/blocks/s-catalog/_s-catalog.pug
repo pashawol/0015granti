@@ -1,0 +1,125 @@
+mixin s-catalog()
+	// start s-catalog
+	+b.s-catalog.pt-0#s-catalog&attributes(attributes)
+		+b.s-catalog-filter.bg-light 
+			.container
+				.row
+					.col
+						.strong.pb-2 Подберите нужную комплектацию
+					.col-sm-auto
+						a.text-secondary.tdu.small(href="#") Сбросить все фильтры
+				.row
+					mixin in(t)
+						.col-auto
+							+b.LABEL.filter-btn
+								+e.INPUT.input(type="checkbox")
+								+e.SPAN.text= t
+					+in('С калиткой')
+					+in('OSB')
+					+in('Без калитки')
+					+in('Фанера')
+					+in('Антивандальное покрытие')
+					+in('Утепленные')
+					+in('Вагонка')
+		.container.section 
+			.row
+				mixin item(i)
+					+b.card-item-col.col-xl-3.col-lg-4.col-md-6
+						+b.card-item--catalog.text-center
+							+e.img-wrap.border-0.mb-0(href="#")
+								img.lazy.res-i(src="#" data-src=`img/prod-${i}.jpg`, alt="") 
+							+e.caption.mw-100
+								.small Гаражные ворота (глухие) 1
+								p Цена
+								div  
+									strong
+										span.h3 14 500 
+										| руб.
+								+e.btn.btn-primary.btn(href="#") Заказать
+						// /+b.card-item.text-center
+					// /.col-lg-4.col-md-6
+				
+				mixin item-st(i)
+					+b.card-item-col.col-xl-3.col-lg-4.col-md-6
+						+b.card-item--catalog.text-center
+							+e.img-wrap.border-0.mb-0(href="#")
+								+e.label АКЦИЯ
+								img.lazy.res-i(src="#" data-src=`img/prod-${i}.jpg`, alt="") 
+							+e.caption.mw-100
+								.small Гаражные ворота (глухие) 1
+								p Цена
+								div
+									strong.d-inline-block.text-secondary.strike
+										span.h3 16 000 
+										| руб. 
+									strong.d-inline-block.text-primary
+										span.h3 14 500 
+										| руб.
+								+e.btn.btn-primary.btn(href="#") Заказать
+						// /+b.card-item.text-center
+					// /.col-lg-4.col-md-6
+				
+				+item('1'  )
+				+item-st('2'  )
+				+item('3'  )
+				+item-st('4'  )
+				+item('3'  )
+				+item-st('3'  )
+				+item('4'  )
+				+item('4'  )
+			+pugin()
+	// end s-catalog
+
+
+mixin s-catalog-03()
+	// start s-catalog
+	+b.s-catalog.section#s-catalog&attributes(attributes)
+		 
+		.container
+			.section-title.text-center
+				h2 Возможно вас заинтересует
+			.row
+				mixin item(i)
+					+b.card-item-col.col-xl-3.col-lg-4.col-md-6
+						+b.card-item--catalog.text-center
+							+e.img-wrap.border-0.mb-0(href="#")
+								img.lazy.res-i(src="#" data-src=`img/prod-${i}.jpg`, alt="") 
+							+e.caption.mw-100
+								.small Гаражные ворота (глухие) 1
+								p Цена
+								div  
+									strong
+										span.h3 14 500 
+										| руб.
+								+e.btn.btn-primary.btn(href="#") Заказать
+						// /+b.card-item.text-center
+					// /.col-lg-4.col-md-6
+				
+				mixin item-st(i)
+					+b.card-item-col.col-xl-3.col-lg-4.col-md-6
+						+b.card-item--catalog.text-center
+							+e.img-wrap.border-0.mb-0(href="#")
+								+e.label АКЦИЯ
+								img.lazy.res-i(src="#" data-src=`img/prod-${i}.jpg`, alt="") 
+							+e.caption.mw-100
+								.small Гаражные ворота (глухие) 1
+								p Цена
+								div
+									strong.d-inline-block.text-secondary.strike
+										span.h3 16 000 
+										| руб. 
+									strong.d-inline-block.text-primary
+										span.h3 14 500 
+										| руб.
+								+e.btn.btn-primary.btn(href="#") Заказать
+						// /+b.card-item.text-center
+					// /.col-lg-4.col-md-6
+				
+				+item('1'  )
+				+item-st('2'  )
+				+item('3'  )
+				+item-st('4'  )
+			 
+	// end s-catalog
+
+

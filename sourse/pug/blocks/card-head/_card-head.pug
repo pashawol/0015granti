@@ -1,0 +1,55 @@
+mixin card-head()
+	// start card-head
+	+b.card-head.section#card-head&attributes(attributes)
+		.container 
+			.row
+				.col-md-6
+					+e.img-wrap.text-center.mb-3
+						img.res-i(src="img/calc-img.jpg", alt="")
+				.col-md-6
+					h1.h2.pb-4.ttu.fw-400 Гаражные ворота №2 с калиткой
+					.row.h2.pb-3
+						.col-auto Цена 
+								span.text-primary 
+									strong.h1 41 500 
+									|
+									|  руб.
+						.col-auto
+							.strike.text-secondary
+								strong.h1 54 600  
+								|
+								|  руб.
+					.row.align-items-center.pb-3
+						.col-auto Выберите количество:
+						.col-auto
+							+b.block-add.input-group(role="group")
+								.input-group-prepend
+									+e.btn--minus.btn.btn-light -
+								input.form-control(type="text" value="1")
+								.input-group-append
+									+e.btn--plus.btn.btn-light +
+					p Выберите цвет: 
+						|
+						span.text-secondary выбран RAL 6015
+					+e.slider-color--js
+						mixin item(c,t)
+							+e.slide
+								+e.LABEL.item
+									+e.INPUT.input(type="radio" name="color-variant")
+									+e.SPAN.color(style= c)
+									+e.SPAN.text= t
+							// /+e.slide
+						+item('background-color: #774850;','ral 6015')
+						+item('background-color: #0f5f2b;','ral 6016')
+						+item('background-color: #a1a1a1;','ral 6017')
+						+item('background-color: #c4df9b;','ral 6018')
+						+item('background-color: #7da7d9;','ral 6019') 
+						+item('background-color: #7da7d9;','ral 6019') 
+					.row.align-items-center
+						.col-auto
+							+e.btn.btn.btn-primary(href="#") Заказать
+						.col
+							+e.gift-text.text-primary 
+								img(src="img/gift.svg", alt="")
+								| Табличка с номером в подарок!
+	// end card-head

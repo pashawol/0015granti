@@ -1,15 +1,26 @@
 .modal-win {
 	display: block;
 	position: relative;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ffffff;
+	border-radius: 10px;
+	.form-wrap{
+		&__img-wrap{
+			border: 1px solid #b7b7b7;
+			padding: 5px;
+			margin-bottom: 20px;
+			&--uzor{
+				max-width: 70px;
+			}
+		} 
+	}
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
 	}
-	.mfp-close {
-		color: $primary;
-		font-size: 40px;
-		font-weight: 100;
-	}   
+  
 }
 
 a {

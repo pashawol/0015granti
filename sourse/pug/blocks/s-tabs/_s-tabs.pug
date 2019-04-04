@@ -1,0 +1,59 @@
+mixin s-tabs()
+	// start tabs
+	+b.tabs--section
+		.container
+			.row
+				.col-md-3
+					+e.caption
+						+e.btn.active 
+							span Портфолио
+						+e.btn 
+							span Преимущества
+						+e.btn 
+							span Как заказать
+						+e.btn 
+							span Отзывы
+						+e.btn 
+							span Полезное
+				.col-md-9
+					+e.content.active
+						+e.slider--1js.gal
+							+e.slide
+								+e.img-wrap.img-bg(href="img/port-1.jpg"): img.res-i(src="#" data-lazy="img/port-1.jpg", alt="")
+							+e.slide
+								+e.img-wrap.img-bg(href="img/port-2.jpg"): img.res-i(src="#" data-lazy="img/port-2.jpg", alt="")
+							+e.slide
+								+e.img-wrap.img-bg(href="img/port-2.jpg"): img.res-i(src="#" data-lazy="img/port-2.jpg", alt="")
+					+e.content
+						+e.slider--1js.gal
+							+e.slide
+								+e.img-wrap.img-bg(href="img/port-1.jpg"): img.res-i(src="#" data-lazy="img/port-1.jpg", alt="")
+							+e.slide
+								+e.img-wrap.img-bg(href="img/port-2.jpg"): img.res-i(src="#" data-lazy="img/port-2.jpg", alt="")
+							+e.slide
+								+e.img-wrap.img-bg(href="img/port-2.jpg"): img.res-i(src="#" data-lazy="img/port-2.jpg", alt="")
+					+e.content
+						+e.slider--1js.gal
+							+e.slide
+								+e.img-wrap.img-bg(href="img/port-1.jpg"): img.res-i(src="#" data-lazy="img/port-1.jpg", alt="")
+							+e.slide
+								+e.img-wrap.img-bg(href="img/port-2.jpg"): img.res-i(src="#" data-lazy="img/port-2.jpg", alt="")
+							+e.slide
+								+e.img-wrap.img-bg(href="img/port-2.jpg"): img.res-i(src="#" data-lazy="img/port-2.jpg", alt="")
+					+e.content
+						+e.slider--1js.gal
+							+e.slide
+								+e.img-wrap.img-bg(href="img/port-1.jpg"): img.res-i(src="#" data-lazy="img/port-1.jpg", alt="")
+							+e.slide
+								+e.img-wrap.img-bg(href="img/port-2.jpg"): img.res-i(src="#" data-lazy="img/port-2.jpg", alt="")
+							+e.slide
+								+e.img-wrap.img-bg(href="img/port-2.jpg"): img.res-i(src="#" data-lazy="img/port-2.jpg", alt="")
+					+e.content
+						+e.slider--1js.gal
+							+e.slide
+								+e.img-wrap.img-bg(href="img/port-1.jpg"): img.res-i(src="#" data-lazy="img/port-1.jpg", alt="")
+							+e.slide
+								+e.img-wrap.img-bg(href="img/port-2.jpg"): img.res-i(src="#" data-lazy="img/port-2.jpg", alt="")
+							+e.slide
+								+e.img-wrap.img-bg(href="img/port-2.jpg"): img.res-i(src="#" data-lazy="img/port-2.jpg", alt="")
+	// end tabs

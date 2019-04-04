@@ -1,0 +1,29 @@
+mixin s-stock()
+	// start s-stock
+	+b.s-stock.section#s-stock&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2.text-primary.strong.border-0 Сезонные акции и скидки
+				.h6 
+					strong Внимание!  
+					|
+					| Сроки действия акции ограничены, подробности уточняйте у наших менеджеров
+			.row
+				mixin item(  )
+					+b.card-item-col.col-lg-3.col-md-6
+						+b.card-item.text-center
+							+e.label АКЦИЯ
+							+e.img-wrap(href="#")
+								img.lazy.res-i(src="#" data-src=`img/stock.jpg`, alt="")
+							+e.caption
+								.strong Ворота из профнастила (зеленые) 300х200 
+								strong.d-inline-block.h3.text-secondary.strike  58 000 р.
+								| 
+								| 
+								strong.d-inline-block.h3 30 000 р.
+						// /+b.card-item.text-center
+					// /.col-lg-4.col-md-6
+				+item()
+				+item()
+				+item()
+	// end s-stock

@@ -1,0 +1,18 @@
+mixin s-cards()
+	// start s-cards
+	+b.s-cards 
+		.row
+			mixin item(i,t)
+				+e.col.col-md-4.col-sm-6
+					+e.item(href="#")
+						+e.DIV.img-wrap
+							img.lazy.res-i(src="#" data-src=`img/card-img-${i}.png` width='60' height="60", alt="")
+						div.fw-500= t
+				// /+e.col.col-lg-4.col-sm-6
+			+item("1","Гранти Групп")
+			+item("2","Миссия и ценности компании")
+			+item("3","Вакансии")
+			+item("4","Собственное производство")
+			+item("5","Отзывы")
+			+item("6","Сертификаты")
+	// end s-cards

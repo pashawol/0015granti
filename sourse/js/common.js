@@ -178,7 +178,8 @@ var JSCCommon = {
 			$(this)
 				.addClass('active').siblings().removeClass('active')
 				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
+				.eq($(this).index()).fadeIn().addClass('active')
+				.find('.tabs__slider--js, .tabs__slider--1js').slick('refresh');;
 
 		});
 	},
@@ -358,31 +359,71 @@ jQuery(document).ready(function ($) {
 
 
 
-	var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
+	var icon = '<svg id="SVGDoc" width="20" height="38" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 20 38"><defs><path d="M1312.25357,3273.60693c-0.25768,0.26173 -0.57974,0.39302 -0.93393,0.39302c-0.35429,0 -0.67635,-0.13129 -0.93403,-0.39302c-0.51527,-0.52431 -0.51527,-1.37614 0,-1.90017l16.42485,-16.70732l-16.42485,-16.70703c-0.51527,-0.52402 -0.51527,-1.37614 0,-1.90017c0.51537,-0.52402 1.35269,-0.52402 1.86796,0l17.35868,17.65711c0.51537,0.52431 0.51537,1.37585 0,1.90017z" id="Path-0"/></defs><desc>Generated with Avocode.</desc><g transform="matrix(1,0,0,1,-1310,-3236)"><g><title>Forma 1</title><use xlink:href="#Path-0" fill="#000000" fill-opacity="1"/></g></g></svg>';
 
 	var arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
 	// карусель
-	$('.s-team__slider').slick({
-		slidesToShow: 3,
+	$('.tabs__slider--js').slick({
+		slidesToShow: 2,
 		slidesToScroll: 1,
-		dots: false,
-		speed: 900,
-		infinite: true,
-		loop: true,
-		arrows: true,
-		mobileFirst: true,
-		// centerMode: true,
-		// focusOnSelect: true ,
-		// variableWidth: true,
+		dots: true,
+		speed: 600,
+		infinite: false, 
+		arrows: true, 
 		prevArrow: arrr2,
 		nextArrow: arrl2,
+		responsive: [
+		 
+			 
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1
+				}
+			} 
+		]
 	});
 
-	$('.s-gal__slider,' +
-			' .s-project__slider--js ,' +
-			' .slider-for ,' +
-			' .slider-for2 ')
+	
+	$('.tabs__slider--1js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 600,
+		infinite: true, 
+		arrows: true, 
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+ 
+	});
+	
+	$('.card-head__slider-color--js').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 600,
+		infinite: true, 
+		arrows: true, 
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		responsive: [
+		 
+			 
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 4
+				}
+			} 
+		]
+	});
+
+
+
+	// $('.tabs__slider--js').slick('refresh');
+
+	$('.tabs__slider--js, .tabs__slider--1js')
 		.on('lazyLoaded', function (event, slick, image, imageSource) {
 			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 		});

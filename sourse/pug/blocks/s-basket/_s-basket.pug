@@ -1,0 +1,44 @@
+mixin s-basket()
+	// start s-basket
+	.container.section.pt-0
+		h1.fw-400.h2.text-center.ttu оформление заказа
+		+b.s-basket
+			table.w-100
+				thead
+					tr.text-center
+						th Фото
+						th Название
+						th Количество
+						th Цена
+				tbody
+					- for (var x = 0; x < 2; x++)
+						tr
+							td
+								+e.img-wrap(href="#")
+									img.res-i(src="img/prod-1.jpg", alt="")
+							td
+								.h6.strong: a.text-body(href="#") Дверь Гранти №15s
+								.h6 Цвет: RAL 2018 (бордовый)
+									br
+									| Узор: №4
+							td
+								+b.block-add.input-group(role="group")
+									.input-group-prepend
+										+e.btn--minus.btn.btn-light -
+									input.form-control(type="text" value="1")
+									.input-group-append
+										+e.btn--plus.btn.btn-light +
+							td
+								.mb-2 
+									span.h6 12 500 
+									|  руб.
+								+e.A.delete.tdu(href="#")
+									+icon("close") 
+		.text-right.h2 
+			strong Итого: 
+			| 
+			strong.h1 39 000 
+			|
+			| 
+			span руб.
+		// end s-basket

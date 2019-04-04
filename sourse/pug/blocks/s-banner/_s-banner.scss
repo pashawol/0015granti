@@ -1,0 +1,51 @@
+.s-banner {
+	background-color: #6a6a6a;
+	background-image: linear-gradient(to top, $body-color 0%, #434343 51%, $body-color 100%);
+	color: #ffffff; 
+	.section-title{
+		h2{
+			&::before{
+				display: none;
+			}
+		}
+	}
+	&__btn{
+		display: block;
+		max-width: 250px;
+		margin-top: 1rem;
+		margin-bottom: 1REM;
+			@include media-breakpoint-up(sm) {
+				margin-left: 0;
+				margin-right: 0px;
+			}
+			margin-left: auto;
+			margin-right: auto;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {
+		text-align: left;
+	}
+	text-align: center;
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

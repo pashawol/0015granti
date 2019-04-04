@@ -1,6 +1,64 @@
 .top-line {
+  padding-top: 22px;
+  font-size: $small;
+  padding-bottom: 20px;
+  .row{
+    align-items: center;
+  }
+	&__logo{
+    @include media-breakpoint-up(xl) {
 
-	
+      margin-right: 40px;
+    }
+    // padding-top: 10px;
+    display: block;
+    // margin-top: 10px;
+  }
+
+  &__text{
+    display: flex;
+    line-height: 1.2;
+    font-weight: bold;
+    max-width: 320px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  &__icon-wrap{
+    width: 38px;
+    height: 38px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    .icon{
+      font-size: 18px;
+      color: $primary;
+    }
+  }
+
+  &__tel{
+    @extend .h3;
+    @extend .text-body;
+    font-weight: bold;
+  }
+  &__btn{
+    @extend .btn;
+    @extend .btn-primary;
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  &__basket{
+    @extend .text-body;
+    .icon{
+      font-size: 21px;
+      color: $primary;
+      margin-right: 5px;
+    }
+  }
 // 
 @include media-breakpoint-up(xl) {}
 

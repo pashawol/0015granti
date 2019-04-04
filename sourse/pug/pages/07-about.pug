@@ -1,0 +1,45 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-why/_s-why.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/s-all-for-you/_s-all-for-you.pug
+include ../blocks/s-stock/_s-stock.pug
+include ../blocks/s-portfolio/_s-portfolio.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-banner/_s-banner.pug
+include ../blocks/s-tabs/_s-tabs.pug
+include ../blocks/aside/_aside.pug
+include ../blocks/s-cards/_s-cards.pug
+
+block title
+	title О компании
+
+block pagecontent
+	 
+	//- +mob-mnu()
+	+b.HEADER.header
+		+top-line()
+		+top-nav() 
+		+b.header-block--page(style='background-image: url(img/about-head-bg.jpg);')
+			.container
+				.row
+					.col-md-6
+						h1.strong  О компании
+						ul
+							li.strong Европейское качество
+							li.strong Изготовление под ключ 
+							li.strong Двойной контроль качества
+
+	.container
+		+breadcrumb('О компании','Главная')
+		.row
+			.col-lg-4.d-none.d-lg-block
+				+aside
+			.col-lg-8
+				+s-cards
+	+footer()
+

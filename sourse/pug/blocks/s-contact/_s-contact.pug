@@ -1,9 +1,67 @@
 mixin s-contact()
 	// start s-contact
 	+b.s-contact.section#s-contact&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 s-contact
-				
+		.container 
 			.row
+				.col-lg-6
+					+e.group
+						+e.item
+							.h2 Адрес головного офиса
+							.strong Московская область, г. Клин
+							div Ленинградское шоссе, 88 км, строение 100
+								br
+								|(территория бывшего завода «Химволокно»)
+
+						+e.item 
+							.h3.strong
+								a.text-body(href="tel:+7(495)101-34-40") +7 (495) 101-34-40
+							a.text-secondary.tdu(href="mailto:vorota@granti-group.ru") vorota@granti-group.ru
+
+						+e.item  	Режим работы
+							br
+							| Пн-пт: 9:00 – 20:00
+							br
+							| Сб-вс: 10:00 – 18:00
+				
+				.col-lg-6.mb-3
+					img.res-i.lazy(src="#" data-src="img/contact-img.jpg", alt="")
+			
+			.row
+				.col-lg-6
+					+e.group
+						+e.item
+							.h2 Адрес выставочного зала
+							.strong г. Москва
+							div Улица Рябиновая, дом 44, строение 31
+							.text-primary
+								.strong Внимание!
+								| В связи с обновлением коллекции продукции, выставочный зал начнет работать 
+								|
+								strong с 17 июля 2019 года.
+					+e.group
+						+e.item
+							.h2 Адрес производства
+							.strong Московская область, г. Клин
+							div Ленинградское шоссе, 88 км, строение 100
+								br
+								|(территория бывшего завода «Химволокно») 
+
+						+e.item  	Режим работы
+							br
+							| круглосуточно (без выходных)
+				
+				.col-lg-6.mb-3
+					+e.map-wrap
+						<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A45b139db0257bfb6ae5e104f630f8df52acf31f2f39681305a7931b08ede1910&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script> 
+			+e.item
+				.h2 Реквизиты 
+				div ООО «Пром-Сталь-Плюс»
+					br
+					| ИНН: 5020083734
+					br
+					| ОГРН: 1185007001167
+					br
+					| КПП: 502001001
+					br
+					| Генеральный директор — Рыченков Антон Викторович
 	// end s-contact

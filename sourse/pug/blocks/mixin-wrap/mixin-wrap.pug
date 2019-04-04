@@ -15,26 +15,30 @@ mixin pugin()
 		ul.pagination.justify-content-center
 			li.page-item.disabled
 				a.page-link(href='#', tabindex='-1') 
-					i(class="fas fa-chevron-left")
+					+icon("chevron-left")
 			li.page-item.disabled
-				a.page-link.d-none.d-md-block(href='#', tabindex='-1') Назад
+				a.page-link.d-none.d-md-block(href='#', tabindex='-1') Предыдущая
 
 			li.page-item
 				a.page-link(href='#') 1
 			li.page-item.active
-				a.page-link(href='#')
-					| 2 
-					span.sr-only (current)
+				a.page-link(href='#')  2  
+			li.page-item
+				a.page-link(href='#') 3
+			
+			li.page-item
+				a.page-link(href='#') 4
+			
 			li.page-item
 				a.page-link.page-link-more(href='#') ...
 			li.page-item
-				a.page-link(href='#') 3
+				a.page-link(href='#') 12
 
 			li.page-item
-				a.page-link.d-none.d-md-block(href='#') Дальше
+				a.page-link.d-none.d-md-block(href='#') Следующая
 			li.page-item
 				a.page-link(href='#') 
-					i(class="fas fa-chevron-right")
+					+icon("chevron-right")
 //- h2.yel(class="  wow fadeInUp animated " data-wow-offset="120" data-wow-duration="1.2s")  
 mixin arrow()
 	.swiper-button-hand.swiper-button-hand-next.swiper-button-next

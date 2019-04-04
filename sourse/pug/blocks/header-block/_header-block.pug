@@ -1,7 +1,55 @@
 mixin header-block()
 	// start header-block
 	+b.header-block#header-block
-		.container
-			h1
+		.container 
 			.row
+				.col
+					+e.text-block
+						h1.h2.strong Крупнейшее производство распашных ворот по&nbsp;низким ценам
+						.h4.fw-500 
+							span.h2 3000 
+							| 
+							| выполненных проектов
+						.h4.fw-500 
+							span.h2 82% 
+							| 
+							| объектов сдаются досрочно
+				.col-lg-auto
+					+form-wrap 
+						+e.head Закажите Ворота сейчас! 
+						+e.body
+							+input('Имя','text','Введите имя')
+							+input('Телефон','tel','+7 (___) ___-__-__')
+							+polite
+							+e.btn(type='submit') Заказать
+
 	// end header-block
+
+
+mixin header-block-cat()
+	// start header-block
+	+b.header-block(style='background-image: url(img/head-bg-2.jpg);')
+		.container 
+			.row
+				.col
+					+e.text.text-white 
+						h1.strong Гаражные ворота
+						ul
+							li Низкие цены
+							li Бесплатный замер
+							li Гарантия до 10 лет
+							li 3000 выполненных проектов
+							li 82% объектов сдаются досрочно
+							li Монтаж в удобное время
+				.col-lg-auto
+					+form-wrap 
+						+e.head Закажите Ворота сейчас! 
+						+e.body
+							+input('Имя','text','Введите имя')
+							+input('Телефон','tel','+7 (___) ___-__-__')
+							+polite
+							+e.btn(type='submit') Заказать
+
+	// end header-block
+
+

@@ -8,6 +8,16 @@ mixin input(p ,  t , pl)
 			+e.SPAN.title= p
 			+e.INPUT.input.form-control(type= t placeholder= pl)&attributes(attributes)
 	// +e.input-wrap
+mixin select(p ,    pl)
+	+e.input-wrap.form-group
+		label
+			+e.SPAN.title= p
+			+e.SELECT.input.form-control(   )&attributes(attributes)
+				option(value="")= pl
+					| 1
+				block
+	// +e.input-wrap
+
 mixin ta(p , pl)
 	+e.input-wrap.form-group
 		label
@@ -45,6 +55,5 @@ mixin add-file(n)
 
 
 mixin polite()
-	+e.polite
-		+in-ch('checked')(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+	+e.polite.small.text.text-secondary Нажимая на&nbsp;кнопку&nbsp;Вы соглашаетесь с&nbsp;
+			a.text-secondary.tdu(href="#" target="_blank") Политикой конфиденциальности

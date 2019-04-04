@@ -9,7 +9,7 @@ html {
 	// 	margin-right: 0;
 	// }
 
-	// background-image: url(../screen/main.jpg);
+	// background-image: url(../screen/01.png);
 }
 
 body {
@@ -24,6 +24,12 @@ body {
 
 .small {
 	font-size: $small;
+}
+.smaller{
+	font-size: 12px;
+}
+.border-0{
+	border: none !important;
 }
 
 .tdn {
@@ -48,6 +54,10 @@ body {
 
 .fw-300 {
 	font-weight: 300;
+}
+
+.fw-400{
+	font-weight: normal;
 }
 
 .fw-500 {
@@ -75,13 +85,34 @@ body {
 
 .section-title {
 	@extend .h2;
+	@include media-breakpoint-up(lg) {
+
+		padding-bottom: em(20);
+	}
 	padding-bottom: em(10);
-	
+	.h2,
 	>h2 {
 		font-size: inherit;
+		font-weight: normal;
+		text-transform: uppercase;
+		position: relative;
+		padding-bottom: em(10);
 		
+		&::before{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			@include a-cent(x);
+			width: 520px;
+			height: 1px;
+			background-color: $body-color;
+		}
 		@include media-breakpoint-up(md) {}
 	}
+}
+
+.strong{
+	font-weight: bold !important;
 }
 
 
@@ -92,11 +123,11 @@ body {
 // 	}
 // }
 
-// body,
-// html {
-// 	// font-size: $em-base;
-// 	// @include font-size(1rem);
-// }
+body,
+html {
+	// font-size: $em-base;
+	@include font-size(1rem);
+}
 
 body {
 	min-width: 320px;
@@ -400,7 +431,7 @@ input::-webkit-inner-spin-button {
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-
+.invis,
 .invisible{
 	position: absolute;
 		// opacity: 0;

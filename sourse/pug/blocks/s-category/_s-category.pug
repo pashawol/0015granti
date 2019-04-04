@@ -1,0 +1,44 @@
+mixin s-category()
+	// start s-category
+	+b.s-category.section#s-category&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 разновидности металлических ворот
+				
+			.row
+				mixin item(i, t1, t2)
+					+b.card-item-col.col-lg-4.col-md-6
+						+b.card-item.text-center
+							+e.img-wrap(href="#")
+								img.lazy.res-i(src="#" data-src=`img/category-${i}.jpg`, alt="")
+							.small.strong=t1
+							.small= t2
+						// /+b.card-item.text-center
+					// /.col-lg-4.col-md-6
+				+item('1','Решетчатые','Металлические решетчатые ворота для дачи')
+				+item('2','Гаражные','Распашные гаражные ворота')
+				+item('3','Профнастил','Ворота из профлиста для загородного дома')
+	// end s-category
+
+mixin s-category-2()
+	// start s-category
+	+b.s-category.section#s-category&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Смотрите также
+				
+			.row
+				mixin item(i, t1, t2)
+					+b.card-item-col.col-lg-3.col-md-6
+						+b.card-item.text-center
+							+e.img-wrap(href="#")
+								img.lazy.res-i(src="#" data-src=`img/category-${i}.jpg`, alt="")
+							.strong=t1 
+						// /+b.card-item.text-center
+					// /.col-lg-3.col-md-6
+				+item('1','Гаражные ворота с калиткой')
+				+item('2','Гаражные ворота утепленные')
+				+item('3','Гаражные ворота на заказ')
+				+item('3','Гаражные распашные ворота')
+	// end s-category
+

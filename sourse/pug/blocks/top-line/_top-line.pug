@@ -1,4 +1,33 @@
 mixin top-line()
 	// start .top-line
 	+b.top-line
+		.container
+			.row
+				.col-lg-auto.col
+					+e.logo(href='#')
+						img.res-i(src="img/logo.png", alt="")
+				.col.d-none.d-lg-block
+					+e.text
+						+e.icon-wrap
+							+icon('head-i-1')
+						| Крупнейшее производство распашных ворот по&nbsp;низким ценам!
+
+					
+					+e.text
+						+e.icon-wrap
+							+icon('head-i-2')
+						| Доставка и&nbsp;монтаж ворот в&nbsp;Москве и Московской области
+					
+				.col-auto.text-right
+					+e.tel(href="tel:8(495)101-34-40") 8 (495) 101-34-40
+					.small Работаем ежедневно
+						.strong с 9:00 до 20:00
+				.col-sm-auto.text-right.text-sm-left
+					.d-none.d-sm-block
+						+e.btn.popup-with-move-anim(href="#modal-call") Заказать звонок
+					+e.basket(href="#")
+						+icon('basket')
+						| В корзине  
+						| 
+						strong 5 товаров
 	// end .top-line

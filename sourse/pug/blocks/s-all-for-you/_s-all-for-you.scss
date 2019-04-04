@@ -1,0 +1,49 @@
+.s-all-for-you {
+	text-align: center;
+	background-color: $light;
+
+	&__img-wrap{
+		height: 60px;
+		line-height: 60px;
+		vertical-align: middle;
+		@include media-breakpoint-up(md) {
+			
+			margin-bottom: 35px;
+		}
+		margin-bottom: 25px;
+	}
+	&__col{
+								@include media-breakpoint-up(md) {
+									margin-bottom: 40px;
+								}
+		margin-bottom: 30px;
+	}
+	.row{
+		justify-content: center;
+	}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

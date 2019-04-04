@@ -1,4 +1,47 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			| footer
+			.row
+				.col-lg-auto.col-sm-4
+					+e.logo(href='#')
+						img.res-i(src="img/logo-foot.png", alt="")
+				.col-lg.col-sm-8
+					+e.text.small.strong  Крупнейшее производство распашных ворот по&nbsp;низким ценам!
+
+					
+					+e.text.small.strong Доставка и&nbsp;монтаж ворот в&nbsp;Москве и Московской области
+				.col-lg-4.col-sm
+					ul
+						li
+							a.text-white.small(href="#") Гаражные ворота
+						
+						li
+							a.text-white.small(href="#") Ворота из профнастила
+						
+						li
+							a.text-white.small(href="#") Решетчатые ворота
+						
+						li
+							a.text-white.small(href="#") Калькулятор
+						
+						li
+							a.text-white.small(href="#") О компании
+						
+						li
+							a.text-white.small(href="#") Доставка
+						
+						li
+							a.text-white.small(href="#") Контакты
+						
+				 
+				.col-sm-auto.text-sm-right
+					+e.tel.h2.text-white.strong(href="tel:8(495)101-34-40") 8 (495) 101-34-40
+					.small.mb-3 
+						a.text-white.small.tdu(href="#")  info@granti-group.ru
+					+e.btn.btn.btn-primary.popup-with-move-anim(href="#modal-call") Заказать звонок
+			.row
+				.col.smaller
+					a.text-white.tdu(href="#") Вся представленная на сайте информация носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437(2) Гражданского кодекса РФ.
+
+				.col-sm-auto.smaller
+					a.text-white.tdu(href="#")  Политика конфеденциальности

@@ -1,9 +1,16 @@
 mixin s-form()
 	// start s-form
-	+b.s-form.section#s-form&attributes(attributes)
-		.container
+	+b.s-form#s-form&attributes(attributes)
+		.container.section
 			+b.section-title.text-center
-				h2 s-form
-				
-			.row
+				block
+				.h6 Оставьте свои контактные данные и наши менеджеры свяжутся с вами.
+				+form-wrap  
+			+form-wrap
+				+input('Имя','text','Введите имя')
+				+input('E-mail','email','mail@mail.ru')
+				+input('Телефон','tel','+7 (___) ___-__-__')
+				+e.polite.text.text-secondary Нажимая кнопку Вы соглашаетесь на обработку Ваших персональных данных в соответствии с 
+					a.text-secondary.tdu(href="#" target="_blank") Политикой конфиденциальности
+				+e.btn(type='submit') Отправить заявку 
 	// end s-form

@@ -1,33 +1,7 @@
 .top-nav {
-	padding-top: 15px;
-	// position: absolute;
-	top: 100%;
-	// @include clearfix;ss
-	z-index: 20;
-	padding-top: 3px;
-	@include mt;
-	padding-bottom: 10px;
-	top: 0;
-	left: 0;
-	width: 100%;
+ background-color: rgba($color: #fff, $alpha: .8);
 
-	&.fixed {
-		width: 100vw;
-		bottom: auto;
-		margin-top: 0;
-		background-color: #fff;
-	}
-
-	&__nav {
-		text-align: center;
-		list-style-type: none;
-	}
-
-	&__item {
-		display: inline-block;
-		list-style-type: none;
-	}
-
+	 
 	// 
 	@include media-breakpoint-up(xl) {}
 
@@ -59,12 +33,134 @@
 	@include media-breakpoint-down(lg) {}
 
 	@include media-breakpoint-down(md) {}
-
+	
 	@include media-breakpoint-down(sm) {}
-
+	
 	@include media-breakpoint-down(xs) {}
 }
 
+@include media-breakpoint-down(md) {
+	.navbar-header{
+		float: none;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+			.collapse:not(.show).in {
+				display: block !important
+			}
+	.navbar-toggle {
+    // display: none
+		// display: inline-block;
+		display: block;
+	}
+
+}
+@include media-breakpoint-up(lg) {
+
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+.navbar{
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+
+  .navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+  }
+}
+
+.navbar-nav{
+	@include media-breakpoint-up(lg) {
+
+		display: flex;
+	}
+  width: 100%;
+  &::before,
+  &::after{
+    display: none;
+  }
+  .dropdown > a{
+    &::before{
+      content: url(../img/chevron-foot.svg);
+      position: relative;
+      right: 5px;
+      @include a-cent(y);
+      margin-top: -2px;
+    }
+  }
+  &>li{
+		float: none;
+      flex-grow: 1;
+      &:not(:last-child){
+				position: relative;
+				@include media-breakpoint-up(lg) {
+
+					&::before{
+						content: '';
+						position: absolute;
+						right: 0;
+						@include a-cent(y);
+						right: 0;
+						width: 1px;
+						background-color: $body-color;
+						height: $small;
+					}
+					border-bottom: none;
+				}
+				border-bottom: 1px solid #000;
+				}
+      >a{
+        border-bottom: 1px solid transparent;
+        
+      }
+    a {
+      display: block;
+      @extend .text-body;
+			text-transform: uppercase;
+			@include media-breakpoint-up(xl) {
+
+				font-size: $small;
+			}
+			font-size: $small * .8;
+      font-weight: 500;
+      // text-decoration: underline;
+      
+    }
+  }
+  .dropdown-menu{
+		@include media-breakpoint-up(lg){
+			width: 100%;
+		}
+    a{
+      padding: 10px 10px;
+			min-width: 210px;
+    }
+  }
+  }
+
+.navbar-nav{
+  
+}
+.navbar-header{
+	&::before,
+	&::after{
+		display: none;
+	}
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+  background-color: transparent;
+  border-color: $primary;
+}
+.navbar-collapse{
+  padding: 0;
+}
 // мобильное меню
 
 // мобильное меню

@@ -1,0 +1,43 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-why/_s-why.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/s-all-for-you/_s-all-for-you.pug
+include ../blocks/s-stock/_s-stock.pug
+include ../blocks/s-portfolio/_s-portfolio.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-banner/_s-banner.pug
+include ../blocks/s-tabs/_s-tabs.pug
+include ../blocks/s-basket/_s-basket.pug
+
+block title
+	title Корзина
+
+block pagecontent
+	 
+	//- +mob-mnu()
+	+b.HEADER.header
+		+top-line()
+		+top-nav() 
+		//- +b.header-block--page(style='background-image: url(img/Banner_contacty.jpg);')
+		//- 	.container
+		//- 		.row
+		//- 			.col-6.text-center
+		//- 				h1.strong  Корзина
+	.container
+		+breadcrumb('Корзина','Главная')
+	+s-basket
+	+s-form(class="s-form--page")
+		h2.pb-0 получите бесплатную консультацию
+
+	
+	//- +s-banner
+	//- +s-category-2
+	
+	//- +s-tabs 
+	+footer()
+

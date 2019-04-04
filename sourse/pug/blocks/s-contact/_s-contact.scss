@@ -1,4 +1,27 @@
 .s-contact {
+
+	&__item{
+		padding-bottom: 13px;
+	}
+	&__group{
+		// padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #d7d7d7;
+	}
+
+
+	&__map-wrap{
+		position: relative;
+		height: calc(100% - 20px);
+		min-height: 344px;
+		> * {
+			position: absolute;
+			left: 0;
+			top: 0;	
+			width: 100% !important;
+			height: 100% !important;
+		}
+	}
 	//
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

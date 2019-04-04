@@ -3,18 +3,37 @@ extends layout/main.pug
 
 include ../blocks/s-content/_s-content.pug
 include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-why/_s-why.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/s-all-for-you/_s-all-for-you.pug
+include ../blocks/s-stock/_s-stock.pug
+include ../blocks/s-portfolio/_s-portfolio.pug
 
 block title
-	title title
+	title Главная
 
 block pagecontent
-	+mob-mnu()
-	+header()
+	 
+	//- +mob-mnu()
+	+b.HEADER.header(style='background-image: url(img/header-bg.jpg);')
 		+top-line()
-		+top-nav()
+		+top-nav() 
+		+header-block()
+	+s-why
+	+s-category
+	+s-calc
+	+s-all-for-you
+	+s-stock
+	+s-portfolio
 
-	+header-block()
-	+s-form()
-	+s-contact()
+	+b.s-content.section
+		.container
+			+b.section-title.text-center
+				h2  работаем по всей москве и московской области
+			.text-center.mb-3
+				img.res-i.lazy(src="#" data-src="img/map.png" width='825 height="771"', alt="")
+			p На официальном сайте компании «Гранти» вы можете совершить заказ на металлические ворота в гараж напрямую от производителя. Обращаясь в нашу компанию вы можете быть уверенным, что не переплатите постредникам, так как представленная на сайте продукция изготовлена на нашем заводе в городе Серпухов. Завод существует с 1991 года, за это время было изготовлено и установлено более 1500 различных металлоконструкций. Такие факторы как...
+			a.text-secondary(href="#") Подробнее
 	+footer()
 

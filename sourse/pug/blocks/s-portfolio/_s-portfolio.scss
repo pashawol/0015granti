@@ -1,0 +1,123 @@
+.s-portfolio {
+	background-color: $light; 
+
+	.slick-arrow{
+		&.l{
+			@include media-breakpoint-up(xl) {
+			left: -60px;
+		}
+		left: -10px;
+		}
+		&.r{
+			@include media-breakpoint-up(xl) {
+
+				right: -60px;
+			}
+			right: -10px;
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+	.tabs{
+
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 900px;
+	}
+}
+
+.tabs{
+	&__img-wrap{
+		display: block;
+		@include block(430,263);
+	}
+	&__caption{
+		@include media-breakpoint-up(sm) {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 790px;
+		}
+
+			
+	}
+	&__btn{
+		flex-grow: 1;
+		margin-bottom: 15px;
+		@include media-breakpoint-up(sm) {
+			&:not(:last-child){
+				margin-right: 20px;
+			}
+			// margin-bottom: 30px;
+
+		}
+		margin-bottom: 15px;
+		// width: 100%;
+		@extend .btn;
+		display: block;
+		border-radius: 4px;
+		border: 2px solid #ffffff;
+		background-color: #e1e1e1;
+		&:hover,
+		&.active{
+			background-color: $secondary;
+			color: #ffffff;
+		}
+	}
+
+	&__slide{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.slick-dots{
+	// padding-left: 0;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-align: center;
+	li{
+		display: inline-block;
+		height: 10px;
+		background-color: $secondary;
+		width: 10px;
+		border-radius: 50%;
+		margin-left: 5px;
+		margin-right: 5px;
+		button{
+			display: none;
+		}
+		cursor: pointer;
+		&:hover,
+		&.slick-active{
+			background-color: #565656;
+
+		}
+	}
+}

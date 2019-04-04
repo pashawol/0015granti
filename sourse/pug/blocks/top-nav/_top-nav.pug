@@ -13,7 +13,33 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav
-		.container
-			+mnu()
+	
+		.container: nav#menu.navbar
+			.navbar-header
+				span#category.d-lg-none Категории
+				button.btn.btn-navbar.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+					i.fa.fa-bars
+			.collapse.navbar-collapse.navbar-ex1-collapse
+				ul.nav.navbar-nav
+					mixin li(t)
+						li.dropdown
+							a.dropdown-toggle(href='https://demo.opencart.com/index.php?route=product/category&path=20', data-toggle='dropdown')= t
+							.dropdown-menu
+								.dropdown-inner
+									ul.list-unstyled
+										li
+											a(href='https://demo.opencart.com/index.php?route=product/category&path=20_26') PC (0)
+										li
+											a(href='https://demo.opencart.com/index.php?route=product/category&path=20_27') Mac (1)
+								a.see-all(href='https://demo.opencart.com/index.php?route=product/category&path=20') Показать все
+					+li('гаражные ворота')
+					+li('ворота из профнастила')
+					+li('ворота решетчатые')
+					li
+						a(href='https://demo.opencart.com/index.php?route=product/category&path=57') калькулятор
+					+li('о компании')
+					+li('доставка')
+					li
+						a(href='https://demo.opencart.com/index.php?route=product/category&path=17') контакты
 					
 	// end top-nav

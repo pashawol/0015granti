@@ -1,12 +1,10 @@
 
-
-@include font-face ("roboto", "../fonts/Roboto-Regular/Roboto-Regular", $file-formats: woff2 woff ttf);
-@include font-face ("roboto", "../fonts/Roboto-Bold/Roboto-Bold", bold, $file-formats: woff2 woff ttf);
-@include font-face ("roboto", "../fonts/Roboto-Medium/Roboto-Medium", 500, $file-formats: woff2 woff ttf);
-@include font-face ("roboto", "../fonts/Roboto-Black/Roboto-Black", 900, $file-formats: woff2 woff ttf);
+@include font-face ("DIN Pro", "../fonts/DINPro/DINPro", $file-formats: eot woff ttf);
+@include font-face ("DIN Pro", "../fonts/DINPro-Bold/DINPro-Bold", bold, $file-formats: eot woff ttf);
+@include font-face ("DIN Pro", "../fonts/DINPro-Medium/DINPro-Medium", 500, $file-formats: eot woff ttf);
 
 
-$default-font: "roboto";
+$default-font: "DIN Pro";
 
 $def: #373a41;
 $em-base: 16px;

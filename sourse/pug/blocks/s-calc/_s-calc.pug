@@ -1,0 +1,84 @@
+mixin s-calc()
+	// start s-calc
+	+b.s-calc.section#s-calc&attributes(attributes)
+		.container
+			+form-wrap 
+				.h2.ttu Онлайн-калькулятор
+				.h6.pb-3 Воспользуйтесь онлайн-калькулятором для расчета ваших будущих ворот
+				.row
+					.col-lg-6
+						.row
+							.col-md-6
+								+select('Ширина, мм','3000')
+									option 30004
+									option 30001
+									option 30002
+							
+							.col-md-6
+								+select('Высота, мм','2000')
+									option 2000
+									option 2000 1
+									option 20002
+							
+							.col-md-6
+								+select('Отделка металла','Нитроэмаль')
+									option Нитроэмаль 1
+									option Нитроэмаль  2
+									option Нитроэмаль 3
+							
+							.col-md-6
+								+select('Лист металла','3 мм')
+									option 33 мм
+									option 34 мм
+									option 35 мм
+							
+							.col-md-6
+								+select('Внутренняя отделка','Фанера')
+									option Фанера 1
+									option Фанера 2
+									option Фанера 3
+							
+							.col-md-6
+								+select('Встроенный замок','Cisa')
+									option Cisa 1
+									option Cisa 2
+									option Cisa 3
+							
+							.col-md-6
+								+select('Утепление','URSA')
+									option URSA 1
+									option URSA  2
+									option URSA 3
+							
+							.col-md-6
+								+select('Петли','С подшипником или...')
+									option С подшипником или... 1
+									option С подшипником или...2
+									option С подшипником или...3
+							
+							.col-md-6
+								+select('Коробка','50x50')
+									option 50x50 1
+									option 50x50 2
+									option 50x50 3
+							
+							.col-md-6
+								+select('Калитка','Нет')
+									option ДА
+									option 1
+									option 3
+							.col-md-6.pb-2
+								.strong.mb-2 Рыночная цена
+								.h2.strike.strong 45 600 р.
+							
+							.col-md-6.pb-2
+								.strong.mb-2 Ваша цена
+								.h2.text-primary.strong 39 800 р.
+							
+					.col-lg-6
+						+e.img-wrap
+							img.res-i.lazy(src="#" data-src="img/calc-img.jpg", alt="")
+						+e.btn-wrap
+							+e.btn.btn-white(type="button") Рассчитать
+							+e.btn.btn-primary.popup-with-move-anim(href="#modal-order") Заказать замер
+	// end s-calc

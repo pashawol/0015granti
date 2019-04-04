@@ -1,8 +1,31 @@
 .footer {
-		
-
+  box-shadow: 3px -3px 30px rgba(0, 0, 0, 0.2);
+  background-color: $light;
+  background-image: linear-gradient(to top, $body-color 0%, #00384c 100%);
+  color: #ffffff;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
 // 
+&__btn{
+  background-image: linear-gradient(to top, #b41618 0%, $primary 100%);
+  width: 160px;
+  margin-bottom: 20px;
+}
+&__logo{
+  margin-bottom: 15px;
+  display: inline-block;
+}
+ul{
+  columns: 2;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+&__text{
+  margin-bottom: 15px;
+}
 @include media-breakpoint-up(xl) {}
 
 @include media-breakpoint-up(lg) {}

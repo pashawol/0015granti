@@ -1,0 +1,46 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-why/_s-why.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/s-all-for-you/_s-all-for-you.pug
+include ../blocks/s-stock/_s-stock.pug
+include ../blocks/s-portfolio/_s-portfolio.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-banner/_s-banner.pug
+include ../blocks/s-tabs/_s-tabs.pug
+include ../blocks/aside/_aside.pug
+include ../blocks/s-cards/_s-cards.pug
+
+block title
+	title Наше производство
+
+block pagecontent
+	 
+	//- +mob-mnu()
+	+b.HEADER.header
+		+top-line()
+		+top-nav() 
+		+b.header-block--page(style='background-image: url(img/Vacansii.jpg);')
+			.container
+				.row
+					.col-md-6.text-center
+						h1.strong  Наше производство 
+
+	.container
+		+breadcrumb('Наше производство','Главная')
+		.row
+			.col-lg-4.d-none.d-lg-block
+				+aside
+			.col-lg-8
+				+b.s-content.pt-0.section.gal
+					.text-center.h2.ttu Наше производство в фотографиях
+					- for (var x = 0; x < 3; x++)
+						div Центральный офис и производство
+						a(href="img/production-img.jpg")
+							img.res-i.mb-3(src="img/production-img.jpg", alt="")
+	+footer()
+

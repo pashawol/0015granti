@@ -22,25 +22,54 @@ mixin modal()
 	
  
 
-	//- #thanks.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanks', aria-hidden='true')
-	//- 	div( class=" ttext-center  modal-dialog  modal-dialog-centered  " role='document') 
-	//- 		+form-wrap()(class=" modal-content modal-win ")
-	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
-	//- 			br
-	//- 			.h2 Заявка принята
-	//- 			br
-	//- 			.h3 Скоро с Вами свяжутся
-	//- 			br 
+	+form-wrap()(id="modal-thanks" class="zoom-anim-dialog mfp-hide modal-win modal-form text-center" )
+		img.mt-5.mb-3(src="img/checked.png", alt="") 
+		br
+		.h1.fw-500.text-primary Спасибо за заявку!
+		br
+		p Наш специалист свяжется с Вами
+			br
+			| в ближайшее время
+		br 
 
 	+form-wrap()(id="modal-call" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
-		.text-center
-			+e.title.h3.ttu Обратный звонок
-			p Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут
-		+input("text","Ваше Имя")(required) 
-		+input("tel","Ваш телефон")(required)
-		//- +input("email","Ваше email")(required)
-		//- +text( "Комментарий")
-		+e.INPUT.btn.btn.btn-block.btn-warning.mb-4(type="submit" value="Рассчитать") 
-		+polite()
+		+e.head Закажите Ворота сейчас! 
+		+e.body
+			+input('Имя','text','Введите имя')
+			+input('Телефон','tel','+7 (___) ___-__-__')
+			+polite
+			+e.btn(type='submit') Заказать
+			.small.text-primary.pt-2.text-center  Сегодня оформили заявку 
+				|
+				| 
+				strong 4 клиента
 	// #modal-call
+	
+	+form-wrap()(id="modal-order" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
+		+e.head оформление заявки
+		+e.body--lg
+			p Пожалуйста, заполните поля ниже
+			.row
+				.col-sm-6
+					+input('Имя','text','Введите имя')
+				.col-sm-6
+					+input('Телефон','tel','+7 (___) ___-__-__')
+				.col-sm-12
+					.ttu.strong.mb-3  Пожалуйста, заполните поля ниже
+				.col-sm-6
+					+e.img-wrap
+						img.res-i(src="img/category-1.jpg", alt="")
+				.col-sm-6
+					+e.img-wrap--uzor
+						img(src="img/211.png", alt="")
+					.mb-1 Наименование
+					.strong Ворота из профнастила №12
+			+polite
+			+e.btn(type='submit') Заказать
+			.small.text-primary.pt-2.text-center Сегодня оформили заявку 
+				|
+				| 
+				strong 4 клиента
+	// #modal-order
+
 	// modal
