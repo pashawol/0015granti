@@ -13,7 +13,7 @@ var JSCCommon = {
 
 					setTimeout(function () {
 						lazyImages.forEach(function (lazyImage) {
-							if (((lazyImage.getBoundingClientRect().top  - lazyImage.parentElement.clientHeight * 2)<= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + lazyImage.parentElement.clientHeight * 2) >= 0) && getComputedStyle(lazyImage).display !== "none") {
+							if (((lazyImage.getBoundingClientRect().top - lazyImage.parentElement.clientHeight * 2) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + lazyImage.parentElement.clientHeight * 2) >= 0) && getComputedStyle(lazyImage).display !== "none") {
 								lazyImage.src = lazyImage.dataset.src;
 								// lazyImage.srcset = lazyImage.dataset.srcset;
 								lazyImage.classList.remove("lazy");
@@ -54,7 +54,7 @@ var JSCCommon = {
 
 					setTimeout(function () {
 						lazyImages.forEach(function (lazyImage) {
-							if (((lazyImage.getBoundingClientRect().top - lazyImage.parentElement.clientHeight ) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + lazyImage.parentElement.clientHeight) >= 0) && getComputedStyle(lazyImage).display !== "none") {
+							if (((lazyImage.getBoundingClientRect().top - lazyImage.parentElement.clientHeight) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + lazyImage.parentElement.clientHeight) >= 0) && getComputedStyle(lazyImage).display !== "none") {
 								lazyImage.parentElement.style.backgroundImage = 'url(' + lazyImage.dataset.src + ')';
 								lazyImage.src = lazyImage.dataset.src;
 								// lazyImage.srcset = lazyImage.dataset.srcset;
@@ -179,13 +179,14 @@ var JSCCommon = {
 				.addClass('active').siblings().removeClass('active')
 				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
 				.eq($(this).index()).fadeIn().addClass('active')
-				.find('.tabs__slider--js, .tabs__slider--1js').slick('refresh');;
+				.find('.tabs__slider--js, .tabs__slider--1js').slick('refresh');
+			JSCCommon.magnificPopupCall();
 
 		});
 	},
 
 
-	
+
 
 	inlineSVG: function () {
 		//Replace all SVG images with inline SVG
@@ -369,53 +370,53 @@ jQuery(document).ready(function ($) {
 		slidesToScroll: 1,
 		dots: true,
 		speed: 600,
-		infinite: false, 
-		arrows: true, 
+		infinite: false,
+		arrows: true,
 		prevArrow: arrr2,
 		nextArrow: arrl2,
 		responsive: [
-		 
-			 
+
+
 			{
 				breakpoint: 480,
 				settings: {
 					slidesToShow: 1
 				}
-			} 
+			}
 		]
 	});
 
-	
+
 	$('.tabs__slider--1js').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: false,
 		speed: 600,
-		infinite: true, 
-		arrows: true, 
+		infinite: true,
+		arrows: true,
 		prevArrow: arrr2,
 		nextArrow: arrl2,
- 
+
 	});
-	
+
 	$('.card-head__slider-color--js').slick({
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		dots: false,
 		speed: 600,
-		infinite: true, 
-		arrows: true, 
+		infinite: true,
+		arrows: true,
 		prevArrow: arrr2,
 		nextArrow: arrl2,
 		responsive: [
-		 
-			 
+
+
 			{
 				breakpoint: 480,
 				settings: {
 					slidesToShow: 4
 				}
-			} 
+			}
 		]
 	});
 
@@ -514,5 +515,60 @@ jQuery(document).ready(function ($) {
 	// });
 	// });
 
+	$('.readmore-js').readmore({
+		speed: 175,
+		collapsedHeight: 75,
+		moreLink: '<a href="#" class="text-secondary">Подробнее</a>',
+		lessLink: '<a href="#" class="text-secondary">Скрыть</a>',
+		afterToggle: function (trigger, element, expanded) {
+			if (!expanded) { // The "Close" link was clicked
+				$('html, body').animate({
+					scrollTop: element.offset().top
+				}, {
+					duration: 100
+				});
+			}
+		}
+	});
 
+
+	// $('[data-city]').popover({
+	// 	template: '<div class="popover" role="tooltip"> <h3 class="popover-title"></h3><div class="popover-content"></div></div>'
+	// })
+
+	// // всплывашка в карте 
+	$('[data-toggle="popover"]').each(function () {
+		var th = $(this);
+
+		th.popover({
+			template: '<div class="popover popover-map" role="tooltip"><div class="popover-body"></div></div>',
+
+			container: '.map-block',
+			// placement: 'auto'
+		});
+		th.on('shown.bs.popover', function () {
+			$(".popover-body").html('<div class="popover-head row">\
+				<div class="popover-title col">' + th.data("city") + '</div>\
+				<div class="popover-img col-auto">\
+					<a href="' + th.data("href") + '"><img class="res-i" src="' + th.data("img") + '"/></div></a>\
+				</div>\
+				<div class="popover-text text-center">' + th.data("count") + '</div>');
+			th.addClass('active').siblings().removeClass('active').popover('hide');
+
+		})
+
+		th.on('hide.bs.popover', function () {
+			th.removeClass('active');
+		})
+		th.on('hide.bs.popover', function () {
+			th.removeClass('active');
+		})
+
+
+		$("body").on('click', '.popover-close', function () {
+			th.popover('hide');
+
+		})
+	})
+	// / всплывашка в карте 
 });

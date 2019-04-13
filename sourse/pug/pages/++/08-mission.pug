@@ -16,7 +16,7 @@ include ../blocks/aside/_aside.pug
 include ../blocks/s-cards/_s-cards.pug
 
 block title
-	title Наше производство
+	title Миссия и ценности
 
 block pagecontent
 	 
@@ -24,23 +24,22 @@ block pagecontent
 	+b.HEADER.header
 		+top-line()
 		+top-nav() 
-		+b.header-block--page(style='background-image: url(img/Vacansii.jpg);')
+		+b.header-block--page(style='background-image: url(img/Missiya.jpg);')
 			.container
 				.row
-					.col-md-6.text-center
-						h1.strong  Наше производство 
+					.col-md-6
+						h1.strong  Миссия и ценности  
 
 	.container
-		+breadcrumb('Наше производство','Главная')
+		+breadcrumb('Миссия и ценности','Главная')
 		.row
-			.col-lg-4.d-none.d-lg-block
+			.col-lg-4
 				+aside
 			.col-lg-8
-				+b.s-content.pt-0.section.gal
-					.text-center.h2.ttu Наше производство в фотографиях
-					- for (var x = 0; x < 3; x++)
-						div Центральный офис и производство
-						a(href="img/production-img.jpg")
-							img.res-i.mb-3(src="img/production-img.jpg", alt="")
+				+b.s-content.pt-0.section
+					.text-center.h2.ttu.pb-3 Высокое качество – по доступной цене! 
+					img.lazy.res-i(src="#" data-src="img/miss.jpg", alt="") 
 	+footer()
+
+	
 

@@ -13,10 +13,12 @@
   word-wrap: break-word;
   background-color: $popover-bg;
   background-clip: padding-box;
-  border: $popover-border-width solid $popover-border-color;
+  // border: $popover-border-width solid $popover-border-color;
   @include border-radius($popover-border-radius);
   @include box-shadow($popover-box-shadow);
-
+  box-shadow: 1px 3px 16px rgba(0, 0, 0, 0.3);
+  // width: 138px;
+  line-height: 1.2;
   .popover-arrow {
     position: absolute;
     display: block;

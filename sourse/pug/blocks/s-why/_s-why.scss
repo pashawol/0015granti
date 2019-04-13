@@ -1,4 +1,7 @@
 .s-why {
+	.row{
+		justify-content: center;
+	}
 	background-color: $light;
 	&__col{
 		@include media-breakpoint-up(md) {
@@ -14,10 +17,18 @@
 	&__img-wrap{
 		width: 55px;
 		height: 55px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
 		border: 1px solid #d7d7d7;
 		background-color: #ffffff;
 		position: relative;
 		flex-shrink: 0;
+		@include mt(.9);
+		&:hover{
+			transform: rotateY(360deg);
+		}
 		@include media-breakpoint-up(md) {
 			margin-left: 0;
 			margin-right: 17px;
@@ -26,7 +37,9 @@
 		margin-left: auto;
 		margin-right: auto;
 		img{
-			@include a-cent;
+			flex-shrink: 0;
+			// @include a-cent;
+			text-align: center;
 		}
 
 	

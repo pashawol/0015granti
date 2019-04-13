@@ -9,16 +9,12 @@ mixin s-calc()
 					.col-lg-6
 						.row
 							.col-md-6
-								+select('Ширина, мм','3000')
-									option 30004
-									option 30001
-									option 30002
+								//- +select()
+								+input('Ширина, мм','text','3000')
 							
 							.col-md-6
-								+select('Высота, мм','2000')
-									option 2000
-									option 2000 1
-									option 20002
+								//- +select('Высота, мм',)
+								+input('Высота, мм','text','2000')
 							
 							.col-md-6
 								+select('Отделка металла','Нитроэмаль')
