@@ -1,0 +1,59 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-why/_s-why.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/s-all-for-you/_s-all-for-you.pug
+include ../blocks/s-stock/_s-stock.pug
+include ../blocks/s-portfolio/_s-portfolio.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-banner/_s-banner.pug
+include ../blocks/s-tabs/_s-tabs.pug
+include ../blocks/aside/_aside.pug
+include ../blocks/s-cards/_s-cards.pug
+
+block title
+	title Миссия и ценности
+
+block pagecontent
+	 
+	//- +mob-mnu()
+	+b.HEADER.header
+		+top-line()
+		+top-nav() 
+		+b.header-block--page(style='background-image: url(img/Missiya.jpg);')
+			.container
+				.row
+					.col-md-6
+						h1.strong Гранти Групп 
+
+	.container
+		+breadcrumb('Гранти Групп ','Главная')
+		.row
+			.col-lg-4
+				+aside
+			.col-lg-8
+				+b.s-content.pt-0.section
+					p Компания «Гранти-Групп» на протяжении долгого времени находится в числе лучших российских производителей металлоконструкций любой сложности, в том числе распашных ворот. Мы применяем инновационные решения в технологиях производства и каждый день работаем над увеличением качества выпускаемой продукции. Так же благодаря новейшему высокоточному оборудованию, клиенту поставляются распашные ворота и другие металлоконструкции высокого качества. 
+					.row
+						each val, index in ["Собственное сертифицированное производство","Инновационные решения","3000 выполненных проектов","Работаем с частными и коммерческими объектами","Бесплатный замер","Транспортная логистика","Монтаж в удобное время","Внимание к каждому клиенту","Сертифицированные специалисты","Доставка и установка под ключ","Европейское качество","82% объектов сдаются досрочно "]
+							+e.col.col-md-4.col-6.text-center.pb-4
+								+e.img-wrap
+									img.lazy.res-i(src="#" data-src=`img/gr-${index + 1}.jpg`, alt="")
+								+e.text= val
+
+					p Реквизиты компании:
+					p Компания «Гранти-Групп» является дочерней компанией ООО "Пром-Сталь-Плюс"
+					p ИНН: 5020083734
+					p ОГРН: 1185007001167
+					p КПП: 502001001
+					p  Генеральный директор – Рыченков Антон Викторович
+					p.strong «Высокое качество – по доступной цене!»
+
+	+footer()
+
+	
+
