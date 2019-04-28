@@ -571,4 +571,14 @@ jQuery(document).ready(function ($) {
 		})
 	})
 	// / всплывашка в карте 
+	function DoRotate(d) {
+    $(".poleChudes__aniumante-block").css({
+        transform: 'rotate(' + d + 'deg)'
+    });
+}
+
+	$(".poleChudes__baraban-img ").click(function(){
+		// DoRotate(100);
+		$(".poleChudes__aniumante-block").addClass("poleChudes__aniumante-block--active");
+	})
 });

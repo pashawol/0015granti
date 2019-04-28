@@ -71,5 +71,33 @@ mixin modal()
 				| 
 				strong 4 клиента
 	// #modal-order
+	
+	+form-wrap()(id="modal-gift" class="zoom-anim-dialog mfp-hide modal-win modal-form  modal-form-pole" )
 
+		.row
+			.col-12
+				+e.pole-title Крутите барабан и получите свой приз!
+			.col-auto
+				+b.poleChudes
+					+e.baraban
+						+e.baraban-img
+							+e.aniumante-block: img.res-i(src="img/baraban.png", alt="")
+							+e.baraban-arrow
+								img(src="img/arrow-pole.png", alt="")
+					+e.block-result
+						+e.block-result-btn ВАШ ПРИЗ
+						+e.block-result-text 10% СКИДКА
+			.col
+				+e.body
+					.strong.text-center Чтобы начать крутить барабан, заполните поля ниже
+					+input('Имя','text','Введите имя')
+					+input('Телефон','tel','+7 (___) ___-__-__')
+					+polite
+					+e.btn(type='submit') Крутить барабан!
+					.small.text-primary.pt-4.text-secondary  Внимание!
+						br
+						| Барабан можно крутить только 1 раз
+	// #modal-order
+	.container
+		a(href="#modal-gift").popup-with-move-anim modal-gift
 	// modal
