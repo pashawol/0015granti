@@ -537,9 +537,22 @@ jQuery(document).ready(function ($) {
 	// })
 
 	// // всплывашка в карте 
+	// var bBox = svg1.getBBox();
 	$('[data-toggle="popover"]').each(function () {
-		var th = $(this);
-
+		var th = $(this); 
+		var index =	th.index();
+		th.addClass("map-div--" + index);
+		// th.data("div") = "map-div--" + index;
+		$(".mark-wrap").append('<div class="map-div map-div--' + index + '"></div>');
+		$("div.map-div--" + index)
+		// .attr({
+		// 	'style': 'transform: translate3d(' + th.position().left + 'px, ' + th.position().top + 'px, 0)'
+		// })
+		.css({
+			'top': ((th.position().top  - $(".mark-wrap").position().top     ) ),
+			'left': ((th.position().left  - $(".mark-wrap").position().left  )), 
+		})
+		// console.log(w, h);
 		th.popover({
 			template: '<div class="popover popover-map" role="tooltip"><div class="popover-body"></div></div>',
 
@@ -554,15 +567,14 @@ jQuery(document).ready(function ($) {
 				</div>\
 				<div class="popover-text text-center">' + th.data("count") + '</div>');
 			th.addClass('active').siblings().removeClass('active').popover('hide');
-
+			$("div.map-div--" + index).addClass('active');
 		})
-
+		
 		th.on('hide.bs.popover', function () {
 			th.removeClass('active');
+			$("div.map-div--" + index).removeClass('active');
 		})
-		th.on('hide.bs.popover', function () {
-			th.removeClass('active');
-		})
+	 
 
 
 		$("body").on('click', '.popover-close', function () {
