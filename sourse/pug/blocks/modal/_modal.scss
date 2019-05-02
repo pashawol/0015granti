@@ -200,12 +200,59 @@ a {
 
 	}
 	&__aniumante-block{
-		width: 280px;
-		height: 280px;
+		width: 260px;
+		height: 260px;
 		// transform: rotate(10deg);
-		border-radius: 50%;
-		overflow: hidden;
-		transition:  1s ease-in-out;
+		&.wrapper{
+
+			border-radius: 50%;
+			overflow: hidden;
+			transition:  1s ease-in-out;
+			border: 8px solid #ccc;
+			border-radius: 50%;
+			position: relative;
+			overflow: hidden;
+			box-shadow:  0 5px 10px rgba($color: #000000, $alpha: .5);
+		}
+		.sector{
+			
+			// box-shadow:  -2px 0px 5px rgba($color: #fff, $alpha: 1.0);
+			position: absolute;
+			transform-origin: 100% 100%;
+			span{
+				display: block;
+				position: relative;
+				transform:  rotate(106deg)  ;
+				text-transform: uppercase;
+				font-weight: bold;
+				
+			}
+			&__wrap{
+				position: relative;
+				transform-origin: 0 0;
+				display: block;
+				transform:    skew(-60deg);
+
+				}
+			background: #fff;
+			width: 125px;
+			height: 125px;
+			margin-top: -125px;
+			margin-left: -125px;
+			padding-top: 87px;
+			padding-left: 68px;
+			font-size: 12px;
+			text-align: center;
+			line-height: 1;
+			left: 50%;
+			top: 50%;
+			// overflow: hidden;
+			// border: 1px solid #999;
+			&:nth-child(odd){
+				background-color: #000000;
+				color: #ffffff;
+			}
+		}
 	}
 	
 @keyframes baraban {
@@ -221,7 +268,7 @@ a {
 	&__baraban-arrow{
 		@include a-cent;
 		margin-top: rem(-15);
-		margin-left: rem(1);
+		margin-left: rem(-5);
 	}
 	&__block-result{
 		height: 50px;

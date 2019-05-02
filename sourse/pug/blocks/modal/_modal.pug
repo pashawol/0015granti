@@ -81,7 +81,42 @@ mixin modal()
 				+b.poleChudes
 					+e.baraban
 						+e.baraban-img
-							+e.aniumante-block: img.res-i(src="img/baraban.png", alt="")
+							+e.aniumante-block.wrapper(style='transform: rotate(15deg) ')
+								+b.sector(style='transform: rotate(75deg) skew(60deg);')
+									+e.wrap
+										span  3%  Скидка 
+								+b.sector(style='transform: rotate(105deg) skew(60deg);')
+									+e.wrap
+										span 5%  Скидка 
+								+b.sector(style='transform: rotate(135deg) skew(60deg);')
+									+e.wrap
+										span  7%   Скидка 
+								+b.sector(style='transform: rotate(165deg) skew(60deg);')
+									+e.wrap
+										span  10%  Скидка 
+								+b.sector(style='transform: rotate(195deg) skew(60deg);')
+
+								+b.sector(style='transform: rotate(225deg) skew(60deg);')
+
+								+b.sector(style='transform: rotate(255deg) skew(60deg);')
+									+e.wrap
+										span  3%  Скидка 
+
+								+b.sector(style='transform: rotate(285deg) skew(60deg);')
+									+e.wrap
+										span  5%  Скидка 
+
+								+b.sector(style='transform: rotate(315deg) skew(60deg);')
+									+e.wrap
+										span  7%  Скидка 
+
+								+b.sector(style='transform: rotate(345deg) skew(60deg);')
+									+e.wrap
+										span  10%  Скидка 
+
+								+b.sector(style='transform: rotate(375deg) skew(60deg);')
+								+b.sector(style='transform: rotate(405deg) skew(60deg);')
+							//- +e.aniumante-block: img.res-i(src="img/baraban.png", alt="")
 							+e.baraban-arrow
 								img(src="img/arrow-pole.png", alt="")
 					+e.block-result
