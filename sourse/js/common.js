@@ -557,7 +557,8 @@ jQuery(document).ready(function ($) {
 			template: '<div class="popover popover-map" role="tooltip"><div class="popover-body"></div></div>',
 
 			container: '.map-block',
-			// placement: 'auto'
+			// placement: 'auto',
+			// trigger: 'hover',
 		});
 		th.on('shown.bs.popover', function () {
 			$(".popover-body").html('<div class="popover-head row">\

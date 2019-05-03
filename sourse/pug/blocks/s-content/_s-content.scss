@@ -138,8 +138,8 @@
 		&--24{
 			// left: 10%;
 			// top: 5%;
-			margin-top: 0%;
-			margin-left:0%;
+			margin-top: 5%;
+			margin-left:5%;
 		}
 		
 		&--27{
@@ -168,6 +168,13 @@
 			// top: 5%;
 			margin-top: 2%;
 			margin-left:3%;
+		}
+		
+		&--34{
+			// left: 10%;
+			// top: 5%;
+			margin-top: 1%;
+			margin-left:1%;
 		}
 		
 		&--36{
@@ -270,4 +277,8 @@
 		}
 		.popover-text{
 			padding-top: 10px;
+		}
+
+		.bs-popover-auto[x-placement^=right], .bs-popover-right {
+			margin-left: 0;
 		}
