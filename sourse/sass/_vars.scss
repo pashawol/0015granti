@@ -1,7 +1,7 @@
 
-@include font-face ("DIN Pro", "../fonts/DINPro/DINPro", $file-formats: eot woff ttf);
-@include font-face ("DIN Pro", "../fonts/DINPro-Bold/DINPro-Bold", bold, $file-formats: eot woff ttf);
-@include font-face ("DIN Pro", "../fonts/DINPro-Medium/DINPro-Medium", 500, $file-formats: eot woff ttf);
+@include font-face ("DIN Pro", "./fonts/DINPro/DINPro", $file-formats: eot woff ttf);
+@include font-face ("DIN Pro", "./fonts/DINPro-Bold/DINPro-Bold", bold, $file-formats: eot woff ttf);
+@include font-face ("DIN Pro", "./fonts/DINPro-Medium/DINPro-Medium", 500, $file-formats: eot woff ttf);
 
 
 $default-font: "DIN Pro";

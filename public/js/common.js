@@ -594,4 +594,8 @@ jQuery(document).ready(function ($) {
 		// DoRotate(100);
 		$(".poleChudes__aniumante-block").addClass("poleChudes__aniumante-block--active");
 	})
+
+	$("	.dropdown .before").click(function(){
+		$(this).next().toggle().parent().siblings().find('.dropdown-menu').hide();
+	})
 });

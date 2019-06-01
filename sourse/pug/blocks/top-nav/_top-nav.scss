@@ -85,15 +85,18 @@
   &::before,
   &::after{
     display: none;
-  }
+	}
+	.dropdown{
+		position: relative;
+	}
+	.before{
+		content: url(../img/chevron-foot.svg);
+		position: relative;
+		right: 5px;
+		@include a-cent(y);
+		margin-top: -2px;
+	}
   .dropdown > a{
-    &::before{
-      content: url(../img/chevron-foot.svg);
-      position: relative;
-      right: 5px;
-      @include a-cent(y);
-      margin-top: -2px;
-    }
   }
   &>li{
 		float: none;
@@ -136,7 +139,7 @@
   }
   .dropdown-menu{
 		@include media-breakpoint-up(lg){
-			width: 100%;
+			min-width: 100%;
 		}
     a{
       padding: 10px 10px;
@@ -300,4 +303,8 @@ $h: em(2);
  
 		}
 	}
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block !important;
 }

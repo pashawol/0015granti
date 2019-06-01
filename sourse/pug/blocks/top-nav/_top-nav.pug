@@ -23,7 +23,8 @@ mixin top-nav()
 				ul.nav.navbar-nav
 					mixin li(t)
 						li.dropdown
-							a.dropdown-toggle(href='https://demo.opencart.com/index.php?route=product/category&path=20', data-toggle='dropdown')= t
+							a.dropdown-toggle(href='https://demo.opencart.com/index.php?route=product/category&path=20'  )= t
+							.before
 							.dropdown-menu
 								.dropdown-inner
 									ul.list-unstyled
